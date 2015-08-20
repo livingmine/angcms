@@ -1,0 +1,24 @@
+<a href="#/admin/add-edit-page/0" class="btn btn-success pull-right"> Add New Training</a>
+<h1>Training List</h1>
+<hr/>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+			<th>Speaker</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tr ng-repeat="training in allTrainings">
+    <td>{{training.title}}</td>
+    <td>{{training.description}}</td>
+		<td>{{training.speaker}}</td>
+    <td> <a ng-href="#/admin/add-edit-page/{{training._id}}">Edit</a>
+    </td>
+    <td> <a ng-href="#" ng-click="deleteTraining(training._id)">Delete</a>
+    </td>
+  </tr>
+</table>
